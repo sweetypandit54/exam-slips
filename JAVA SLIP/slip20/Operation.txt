@@ -1,0 +1,57 @@
+package Operation;
+
+public class Addition {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public float subtract(float x, float y) {
+        return x - y;
+    }
+}
+java
+Copy code
+// Operation/Maximum.java
+package Operation;
+
+public class Maximum {
+    public void max(int a, int b) {
+        System.out.println("Maximum of " + a + " and " + b + " is: " + Math.max(a, b));
+    }
+}
+Make sure to save these files in a directory named Operation and compile them using the following commands:
+
+bash
+Copy code
+javac Operation/Addition.java
+javac Operation/Maximum.java
+Now, you can use these classes in another Java program by importing the Operation package. Here's an example:
+
+java
+Copy code
+// MainProgram.java
+import Operation.Addition;
+import Operation.Maximum;
+
+public class MainProgram {
+    public static void main(String[] args) {
+        Addition addObj = new Addition();
+        Maximum maxObj = new Maximum();
+
+        // Test Addition class
+        int sum = addObj.add(5, 3);
+        float difference = addObj.subtract(7.5f, 2.3f);
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+
+        // Test Maximum class
+        maxObj.max(10, 8);
+    }
+}
+Compile and run the MainProgram:
+
+bash
+Copy code
+javac MainProgram.java
+java MainProgram
